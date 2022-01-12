@@ -9,3 +9,7 @@
 h2 {
   margin: 20px;
 }
+
+.comment_wrapper h3,h4,p{
+  margin-left: 20px;
+}

@@ -1,22 +1,20 @@
 import React, {useEffect, useState} from 'react';
+import Comment from "./Comment";
 
 const Comments = () => {
     let [comment, setComments] = useState([]);
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/comments')
             .then(value => value.json())
-            .then(value => {
-                setComments(value);
-            })
+            .then(value => setComments(value))
     }, [])
     return (
         <div>
             <h2>Comments</h2>
-            <ol>
+            <hr/>
                 {
-                    comment.map(value => <li key={comment.id}>{value.body}</li>)
+                    comment.map(value => <Comment name={value.name} email={value.email} body={value.body}/>)
                 }
-            </ol>
         </div>
     );
 };
