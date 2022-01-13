@@ -2,7 +2,6 @@ import React from 'react';
 
 const Comment = (props) => {
     const {name, email, body} = props;
-    console.log(name);
     return (
         <div className={'comment_wrapper'}>
         <h3>{name}</h3>
