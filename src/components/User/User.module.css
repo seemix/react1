@@ -1,0 +1,29 @@
+.user_wapper {
+    display: flex;
+    margin: 5px;
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+.user_name {
+    width: 200px;
+    height: 20px;
+}
+
+button {
+    border-radius: 4px;
+    background-color: #102b3e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+h2 {
+    margin: 20px;
+}
