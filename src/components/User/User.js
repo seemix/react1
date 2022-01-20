@@ -11,7 +11,7 @@ const User = ({user, selectUser}) => {
             <div className={style.user_wapper}>
                 <div className={style.user_name}>{id}. {name}</div>
                 <div>
-                    <button onClick = {() => selectUser(user)}>Details...</button>
+                    <button onClick={() => selectUser(user)}>Details...</button>
                 </div>
             </div>
         </div>

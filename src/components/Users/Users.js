@@ -1,25 +1,26 @@
 import React, {useEffect, useState} from 'react';
 
 import User from "../User/User";
+import baseUrl from "../../configs/BaseUrl";
 
 const Users = ({selectUser}) => {
-    let [users, setUsers] = useState([]);
+    const [users, setUsers] = useState([]);
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/users')
+        fetch(baseUrl+'/users')
             .then(value => value.json())
             .then(value => {
                 setUsers(value);
             })
     }, [])
-   // console.log(typeof (users));
+
     return (
         <div>
             <h2>Users</h2>
-        <div>
+            <div>
                 {
                     users.map(value => <User key={value.id} user={value} selectUser={selectUser}/>)
                 }
-        </div>
+            </div>
         </div>
     );
 };

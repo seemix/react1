@@ -2,12 +2,12 @@ import React, {useEffect, useState} from 'react';
 
 import Post from '../Post/Post';
 import style from './Posts.module.css';
+import baseUrl from "../../configs/BaseUrl";
 
 const Posts = ({userId}) => {
-
-    let [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState([]);
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/posts?userId=' + userId)
+        fetch(baseUrl+'/posts?userId=' + userId)
             .then(value => value.json())
             .then(value => {
                 setPosts(value);
