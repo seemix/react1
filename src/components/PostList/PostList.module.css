@@ -1,0 +1,12 @@
+.details_link {
+    font-size: 16px;
+    color: #282c34;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+.list_item {
+    margin-bottom: 10px;
+}

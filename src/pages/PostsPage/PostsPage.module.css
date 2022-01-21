@@ -1,0 +1,8 @@
+.posts_wrapper {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+}
