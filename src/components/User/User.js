@@ -13,6 +13,9 @@ const User = ({user}) => {
                     <Link to={user.id.toString()} state={user}>
                         <button >Details...</button>
                     </Link>
+                    <Link to={user.id.toString()+'/pictures'} state={user.id}>
+                        <button >Albums...</button>
+                    </Link>
                 </div>
             </div>
         </div>
