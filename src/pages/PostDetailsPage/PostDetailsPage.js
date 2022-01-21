@@ -16,7 +16,7 @@ const PostDetailsPage = () => {
                 <p><b>USER_ID: </b> {userId}</p>
                 <p><b>TITLE: </b> {title}</p>
                 <p><b>BODY: </b> {body}</p>
-                 <Link to={'comments'} state={state}>
+                <Link to={'comments'} state={state}>
                     <button className={style.wide_button}>SHOW COMMENTS OF CURRENT POST</button>
                 </Link>
             </div>
