@@ -1,24 +1,24 @@
 import React, {useEffect, useState} from 'react';
-import {Outlet, useLocation} from "react-router-dom";
+import {Outlet, useParams} from "react-router-dom";
 
 import {albumService} from "../../services/album.service";
+import Album from '../../components/Album/Album';
 
 const PicturesPage = () => {
 
-    const {state} = useLocation();
-    console.log(state);
+    const {id} = useParams();
 
     const [albums, setAlbums] = useState([]);
     useEffect(() => {
-        albumService.getById(state).then(value => setAlbums(value.data))
-    }, [state])
-    console.log(albums);
-
+        albumService.getAlbums(id).then(value => setAlbums(value))
+    }, [id])
 
     return (
         <div>
             <h3>Albums</h3>
-
+            {
+                albums.map(album => <Album key={album.id} album={album}/>)
+            }
             <Outlet/>
         </div>
     );

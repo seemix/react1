@@ -1,0 +1,7 @@
+.pic_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.pic_wrapper img {
+    width: 350px;
+}

@@ -24,7 +24,7 @@ const App = () => {
                     </Route>
 
                     <Route path={':id/pictures'} element={<PicturesPage/>}>
-                        <Route path={':picturesId/pictures'} element={<PicturePage/>}/>
+                        <Route path={':picturesId/'} element={<PicturePage/>}/>
                     </Route>
 
                 </Route>
