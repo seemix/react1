@@ -24,4 +24,4 @@ const PicturesPage = () => {
     );
 };
 
-export default PicturesPage;
+export {PicturesPage};

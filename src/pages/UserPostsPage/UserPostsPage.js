@@ -21,4 +21,4 @@ const UserPostsPage = () => {
     );
 };
 
-export default UserPostsPage;
+export {UserPostsPage};

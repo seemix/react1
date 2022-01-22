@@ -6,7 +6,7 @@ import style from './UserDetailsPage.module.css';
 const UserDetailsPage = () => {
 
     const {state} = useLocation();
-    const {id, name, username, address, email, phone, website} = state;
+    const {name, username, address, email, phone, website} = state;
     
     return (
         <div>
@@ -26,4 +26,4 @@ const UserDetailsPage = () => {
     );
 };
 
-export default UserDetailsPage;
+export {UserDetailsPage};

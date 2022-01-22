@@ -23,4 +23,4 @@ const PostsCommentsPage = () => {
     );
 };
 
-export default PostsCommentsPage;
+export {PostsCommentsPage};

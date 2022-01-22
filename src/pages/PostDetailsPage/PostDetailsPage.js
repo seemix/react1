@@ -25,4 +25,4 @@ const PostDetailsPage = () => {
     );
 };
 
-export default PostDetailsPage;
+export {PostDetailsPage};
