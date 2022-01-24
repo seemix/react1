@@ -4,7 +4,6 @@ import Form from "./components/Form/Form";
 import Users from "./components/Users/Users";
 import {userService} from "./services/user.service";
 
-
 const App = () => {
 
     const [users, setUsers] = useState([]);
