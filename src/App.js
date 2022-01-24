@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect, useState} from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Form from "./components/Form/Form";
+import Users from "./components/Users/Users";
+import {userService} from "./services/user.service";
+
+
+const App = () => {
+
+    const [users, setUsers] = useState([]);
+    const [filteredUsers, setFilteredUsers] = useState([]);
+
+    useEffect(() => {
+        userService.getAll().then(value => {
+            setUsers(value)
+            setFilteredUsers(value)
+        })
+    }, []);
+
+    const filter = (data) => {
+
+        let filteredArr = [...users];
+        if(data.name) {
+            filteredArr = filteredArr.filter(user => user.name.toLowerCase().includes(data.name.toLowerCase()))
+        }
+        if(data.username) {
+            filteredArr = filteredArr.filter(user => user.username.toLowerCase().includes(data.username.toLowerCase()))
+        }
+        if(data.email) {
+            filteredArr = filteredArr.filter(user => user.email.toLowerCase().includes(data.email.toLowerCase()))
+        }
+        setFilteredUsers(filteredArr);
+
+    }
+
+    return (
+        <div>
+            <Form filter={filter}/>
+            <Users users={filteredUsers}/>
+        </div>
+    );
+};
 
 export default App;
