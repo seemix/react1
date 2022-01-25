@@ -35,7 +35,7 @@ const Form = ({update, carForUpdate: {id, model, price, year}}) => {
 
     return (
         <div>
-            <h2>Add new car</h2>
+            <h2>Add/Edit car</h2>
             <form onSubmit={handleSubmit(submit)}>
                 <div><label>Model: <input type="text" defaultValue={''} {...register('model')}/></label></div>
                 {errors.model && <span className={css.error}>{errors.model.message}</span>}
