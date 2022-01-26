@@ -8,7 +8,7 @@ const Cars = ({trigger, update, setCarForUpdate}) => {
     const [cars, setCars] = useState([]);
     useEffect(() => {
         carService.getAll().then(value => setCars([...value]));
-    },[trigger])
+    }, [trigger])
     return (
         <div className={css.cars_wrapper}>
             {
