@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import style from './App.module.css';
+import Menu from "./components/Menu/Menu";
+import Image from "./components/Image/Image";
+
+const App = () => {
+    const [trigger, setTrigger] = useState([]);
+    const [tag, setTag] = useState(['cats']);
+
+    const changeTag = (tag) => {
+        setTag(tag);
+    }
+
+    return (
+        <div className={style.wrapper}>
+            <Menu changeTag={changeTag}/>
+            <Image setTrigger={setTrigger} trigger={trigger} tag={tag}/>
+        </div>
+    );
+};
 
 export default App;
