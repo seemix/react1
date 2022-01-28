@@ -1,0 +1,6 @@
+.wrap {
+    margin: 20px;
+    display: flex;
+    padding: 10px;
+    column-gap: 50px;
+}
