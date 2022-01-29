@@ -1,0 +1,8 @@
+.wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.cat_name {
+    width: 120px;
+}

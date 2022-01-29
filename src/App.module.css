@@ -1,0 +1,13 @@
+.top_wrap {
+  display: flex;
+  gap: 30px;
+  margin: 50px;
+  padding: 10px;
+  align-items: normal;
+
+}
+.bottom_wrap {
+  margin-left: 100px;
+  display: flex;
+  gap: 150px;
+}
