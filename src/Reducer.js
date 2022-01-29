@@ -14,5 +14,4 @@ export const reducer = (state, action) => {
             return {...state, dogs: state.dogs.filter(dog => dog.id !== action.payload.id)};
     } else
         return state;
-
 }
