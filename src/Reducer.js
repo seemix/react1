@@ -1,5 +1,6 @@
 export const reducer = (state, action) => {
     const newPet = {name: action.payload.name};
+
     if (action.type === 'add') {
         if (action.payload.kind === 'cat')
             return {...state, cats: [...state.cats, {id: new Date().getTime(), ...newPet}]}
