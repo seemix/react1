@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {Route, Link, Routes} from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import './App.module.css';
+import Cars from "./components/Cars/Cars";
+import UsersPage from "./pages/UsersPage";
+import PostsPage from "./pages/PostsPage";
+import CommentsPage from "./pages/CommentsPage";
+import css from './App.module.css';
 
-export default App;
+const App = () => {
+
+    return (
+        <div>
+            <div className={css.menu_block}>
+                <Link to={'/'}><span className={css.menu}>Cars</span></Link>
+                <Link to={'/users'}><span className={css.menu}>Users</span></Link>
+                <Link to={'/posts'}><span className={css.menu}>Posts</span></Link>
+                <Link to={'/comments'}><span className={css.menu}>Comments</span></Link>
+            </div>
+            <Routes>
+                <Route index element={<Cars/>} path={'/'}/>
+                <Route path={'/users'} element={<UsersPage/>}/>
+                <Route path={'/posts'} element={<PostsPage/>}/>
+                <Route path={'/comments'} element={<CommentsPage/>}/>
+
+            </Routes>
+        </div>
+    );
+};
+
+export default App

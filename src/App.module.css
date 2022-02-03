@@ -1,0 +1,14 @@
+h2 {
+    margin-left: 120px;
+}
+.menu {
+    font-size: 35px;
+    color: #012f54;
+    font-weight: bolder;
+    margin: 10px;
+    text-decoration: none;
+}
+.menu_block {
+    width: 90%;
+    margin: 0 auto;
+}
