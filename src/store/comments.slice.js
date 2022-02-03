@@ -13,6 +13,7 @@ export const getAllComments = createAsyncThunk(
         }
     }
 )
+
 const commentsSlice = createSlice({
     name: 'commentsSlice',
     initialState: {
