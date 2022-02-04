@@ -12,6 +12,7 @@ const Form = () => {
         if (e.target[0].value) {
             const newTask = {id: new Date().getTime(), task: e.target[0].value, status: false};
             dispatch(addTask(newTask));
+            e.target[0].value = '';
         }
     }
 
