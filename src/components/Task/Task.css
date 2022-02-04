@@ -1,0 +1,23 @@
+.task_wrapper {
+    display: flex;
+    justify-content: normal;
+}
+
+.task_text {
+    width: 200px;
+    font-size: 18px;
+    color:#1a0f01;
+    text-decoration: none;
+}
+
+.completed_task {
+    width: 200px;
+    font-size: 18px;
+    color: gray;
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+.checkbox {
+    width: 40px;
+}

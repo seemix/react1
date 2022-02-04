@@ -1,0 +1,10 @@
+.form_wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.cen {
+    align-self: center;
+}
