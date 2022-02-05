@@ -9,7 +9,6 @@ export const toDoSlice = createSlice({
         },
         changeStatus(state, action) {
             state.map(task => task.id === action.payload ? task.status = !task.status : task);
-            console.log(action.payload);
         },
         deleteTask(state, action) {
             return state.filter(task => task.id !== action.payload)
