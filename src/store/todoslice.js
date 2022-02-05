@@ -16,6 +16,6 @@ export const toDoSlice = createSlice({
 
     }
 })
-export const {addTask, changeStatus, deleteTask, completedCount} = toDoSlice.actions;
+export const {addTask, changeStatus, deleteTask} = toDoSlice.actions;
 const toDoReducer = toDoSlice.reducer;
 export default toDoReducer
