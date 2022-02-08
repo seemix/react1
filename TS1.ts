@@ -38,27 +38,30 @@ console.log(newMission);
 ////////////////////////////////////////////
 
 interface IUser {
-    name:string, age:number, gender:string
+    name: string,
+    age: number,
+    gender: string
 }
 
-const someUser:IUser = {
+const someUser: IUser = {
     name: 'Max',
     age: 18,
     gender: 'male'
 }
 
-function sum(a:number,b:number):number{
-    return a+b
+function sum(a: number, b: number): number {
+    return a + b
 }
-function showSum(a:number,b:number):void{
+
+function showSum(a: number, b: number): void {
     console.log(a + b);
 }
 
-function incAge(someUser:IUser, inc:number):IUser{
-    someUser.age+=inc;
+function incAge(someUser: IUser, inc: number): IUser {
+    someUser.age += inc;
     return someUser;
 }
 
 console.log(sum(1, 2));
-showSum(2,3)
+showSum(2, 3)
 incAge(someUser, 2)
